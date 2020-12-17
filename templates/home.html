@@ -13,23 +13,17 @@
 
 <body>
  <div class="login">
-	<h1>Predict Heart disease</h1>
-     <a class="nav-link" href="heart.html">Heart Disease</a>
+	<h1>Predict Diabetes</h1>
+     <a class="nav-link" href="">Home</a>
      <!-- Form to enter new data for predictions  -->
     <form action="{{ url_for('predict')}}"method="POST">
-      <input type="text" name="age" placeholder="Age" required="required" /><br>
-    	<input type="text" name="sex" placeholder="Sex (1 for Male, 0 for Female)" required="required" /><br>
-        <input type="text" name="cp" placeholder="CP" required="required" /><br>
-        <input type="text" name="trestbps" placeholder="Trest BPS" required="required" /><br>
-        <input type="text" name="chol" placeholder="Cholestrol" required="required" /><br>
-        <input type="text" name="fbs" placeholder="FBS" required="required" /><br>
-	<input type="text" name="restecg" placeholder="Rest ECG" required="required" /><br>
-        <input type="text" name="thalach" placeholder="Thalach" required="required" /><br>
-        <input type="text" name="exang" placeholder="Exang" required="required" /><br>
-        <input type="text" name="oldpeak" placeholder="Old peak" required="required" /><br>
-        <input type="text" name="slope" placeholder="Slope" required="required" /><br>
-	<input type="text" name="ca" placeholder="CA" required="required" /><br>
-        <input type="text" name="thal" placeholder="Thal" required="required" /><br>
+      <input type="text" name="Pregnancies" placeholder="Pregnancies" required="required" /><br>
+    	<input type="text" name="Glucose" placeholder="Glucose" required="required" /><br>
+        <input type="text" name="SkinThickness" placeholder="Skin Thickness" required="required" /><br>
+        <input type="text" name="Insulin" placeholder="Insulin" required="required" /><br>
+        <input type="text" name="BMI" placeholder="BMI" required="required" /><br>
+        <input type="text" name="DiabetesPedigreeFunction" placeholder="Diabetes Pedigree Function" required="required" /><br>
+	<input type="text" name="Age" placeholder="Age" required="required" /><br>
 
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
