@@ -8,8 +8,7 @@ from sklearn.metrics import accuracy_score
 
 app = Flask(__name__)
 
-model = pickle.load(open('LogisticRegressionHeart.sav', 'rb'))
-cols = ['age', 'sex','cp',	'trestbps',	'chol',	'fbs',	'restecg',	'thalach',	'exang',	'oldpeak',	'slope',	'ca',	'thal']
+model = pickle.load(open('LogisticRegressionDiabetes.sav', 'rb'))
 
 @app.route('/')
 def home():
@@ -22,7 +21,7 @@ def predict():
     final=[final]
     prediction = model.predict(final)
     prediction = int(prediction)
-    return render_template('home.html',pred='The report of your heart is  {}'.format(prediction))
+    return render_template('home.html',pred='Your Diabetes report is  {}'.format(prediction))
 
 @app.route('/predict_api',methods=['POST'])
 def predict_api():
